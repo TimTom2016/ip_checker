@@ -2,7 +2,27 @@
 name = "ip_checker"
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/TimTom2016/ip_checker"
+authors = ["Tim Persigehl"]
+
+[package.metadata.wix]
+upgrade-guid = "6E212C49-98FF-4E63-A22B-8C037493B3B1"
+path-guid = "EBBE2FC0-DF1F-47BD-A18A-F2902DB8BC38"
+license = false
+eula = false
 
 [dependencies]
 iced = {version="0.13.1",features = ["auto-detect-theme"]}
-rand = "0.8.5"
+thiserror = "2.0.3"
+ip_checker_logic = {path="ip_checker_logic"}
+iced_anim = "0.1.4"
+
+[profile.dist]
+inherits = "release"
+opt-level = "z"
+debug = false
+strip = true
+lto = true
+codegen-units = 1
+incremental = false
+panic = "abort"
