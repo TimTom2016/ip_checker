@@ -5,6 +5,7 @@ edition = "2021"
 repository = "https://github.com/TimTom2016/ip_checker"
 authors = ["Tim Persigehl"]
 
+
 [package.metadata.wix]
 upgrade-guid = "6E212C49-98FF-4E63-A22B-8C037493B3B1"
 path-guid = "EBBE2FC0-DF1F-47BD-A18A-F2902DB8BC38"
